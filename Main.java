@@ -9,13 +9,13 @@ public class Main
 		String input = readInput();
 		
 		PigLatinTranslator pl = new PigLatinTranslator();
-		//UbbiDubbiTranslator ud = new UbbiDubbiTranslator();
-		//CombinedTranslator ct = new CombinedTranslator(pl, ud);
+		UbbiDubbiTranslator ud = new UbbiDubbiTranslator();
+		CombinedTranslator ct = new CombinedTranslator(pl, ud);
 		
 		
 		System.out.println( pl.translate( input));
-		//System.out.println( ud.translate( input));
-		//System.out.println( ct.translate( input));
+		System.out.println( ud.translate( input));
+		System.out.println( ct.translate( input));
     }
 	
 	public static String readInput()
